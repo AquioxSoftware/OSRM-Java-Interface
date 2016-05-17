@@ -1,2 +1,2 @@
-# OSRM-Java-Interface
+# OSRM Java Interface
 Simple Java API for formatting OSRM requests.
