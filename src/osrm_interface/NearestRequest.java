@@ -14,16 +14,14 @@ public class NearestRequest {
 	private String baseTextURL;
 	private final String nearestTextURL = "/nearest/v1/";
 	
-	private double latitude;
-	private double longitude;
+	private LatLng location;
 	private String profile;
 	private int numberOfLocations;
 	
 	public NearestRequest() {
 		
 		baseTextURL = "http://localhost:5000";
-		latitude = 0;
-		longitude = 0;
+		location = new LatLng();
 		profile = "driving";
 		numberOfLocations = 1;
 		
@@ -35,10 +33,15 @@ public class NearestRequest {
 		
 	}
 	
+	public void setLocation(LatLng inLocation) {
+		
+		location = inLocation;
+		
+	}
+	
 	public void setLocation(double inLatitude, double inLongitude) {
 		
-		latitude = inLatitude;
-		longitude = inLongitude;
+		location = new LatLng(inLatitude, inLongitude);
 		
 	}
 	
@@ -61,7 +64,7 @@ public class NearestRequest {
 		String requestTextURL = baseTextURL;
 		requestTextURL += nearestTextURL;
 		requestTextURL += profile + "/";
-		requestTextURL += longitude + "," + latitude;
+		requestTextURL += location.getLng() + "," + location.getLat();
 		requestTextURL += "?number=" + numberOfLocations;
 		
 		String jsonText = getJsonFromURL(requestTextURL);
@@ -81,7 +84,7 @@ public class NearestRequest {
 			JsonArray temp = jsonWaypoints.get(i).asObject().get("location").asArray();
 			
 			waypoints[i] = new Waypoint(jsonWaypoints.get(i).asObject().get("name").asString(),
-					temp.get(1).asDouble(), temp.get(0).asDouble(),
+					new LatLng(temp.get(1).asDouble(), temp.get(0).asDouble()),
 					jsonWaypoints.get(i).asObject().get("hint").asString(),
 					jsonWaypoints.get(i).asObject().get("distance").asDouble());
 			
