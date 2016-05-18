@@ -2,7 +2,8 @@ package osrm_interface;
 
 public class StepManeuver {
 	
-	public final LatLng location;
+	public final double latitude;
+	public final double longitude;
 	public final double bearingBefore;
 	public final double bearingAfter;
 	public final String type;
@@ -10,10 +11,11 @@ public class StepManeuver {
 	public final String modifier;
 	public final int exit;
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(double inLatitude, double inLongitude, double inbearingBefore, double inBearingAfter,
 			String inType) {
 		
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		bearingBefore = inbearingBefore;
 		bearingAfter = inBearingAfter;
 		type = inType;
@@ -23,10 +25,11 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(double inLatitude, double inLongitude, double inbearingBefore, double inBearingAfter,
 			String inType, String inModifier) {
 		
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		bearingBefore = inbearingBefore;
 		bearingAfter = inBearingAfter;
 		type = inType;
@@ -36,10 +39,11 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(double inLatitude, double inLongitude, double inbearingBefore, double inBearingAfter,
 			String inType, int inExit) {
 		
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		bearingBefore = inbearingBefore;
 		bearingAfter = inBearingAfter;
 		type = inType;
@@ -49,10 +53,11 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(double inLatitude, double inLongitude, double inbearingBefore, double inBearingAfter,
 			String inType, String inModifier, int inExit) {
 		
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		bearingBefore = inbearingBefore;
 		bearingAfter = inBearingAfter;
 		type = inType;
