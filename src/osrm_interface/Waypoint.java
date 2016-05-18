@@ -3,7 +3,8 @@ package osrm_interface;
 public class Waypoint {
 	
 	public final String name;
-	public final LatLng location;
+	public final double latitude;
+	public final double longitude;
 	public final String hint;
 	
 	public final double distance;
@@ -11,10 +12,11 @@ public class Waypoint {
 	public final int waypointIndex;
 	public final int tripsIndex;
 
-	public Waypoint(String inName, LatLng inLocation, String inHint) {
+	public Waypoint(String inName, double inLatitude, double inLongitude, String inHint) {
 		
 		name = inName;
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		hint = inHint;
 		
 		distance = -1;
@@ -24,10 +26,11 @@ public class Waypoint {
 		
 	}
 	
-	public Waypoint(String inName, LatLng inLocation, String inHint, double inDistance) {
+	public Waypoint(String inName, double inLatitude, double inLongitude, String inHint, double inDistance) {
 		
 		name = inName;
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		hint = inHint;
 		
 		distance = inDistance;
@@ -37,11 +40,12 @@ public class Waypoint {
 		
 	}
 	
-	public Waypoint(String inName, LatLng inLocation, String inHint, int inMatchingsIndex,
+	public Waypoint(String inName, double inLatitude, double inLongitude, String inHint, int inMatchingsIndex,
 			int inWaypointIndex) {
 		
 		name = inName;
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		hint = inHint;
 		
 		distance = -1;
@@ -51,11 +55,12 @@ public class Waypoint {
 		
 	}
 	
-	public Waypoint(String inName, LatLng inLocation, int inTripsIndex, int inWaypointIndex,
+	public Waypoint(String inName, double inLatitude, double inLongitude, int inTripsIndex, int inWaypointIndex,
 			String inHint) {
 		
 		name = inName;
-		location = inLocation;
+		latitude = inLatitude;
+		longitude = inLongitude;
 		hint = inHint;
 		
 		distance = -1;
