@@ -1,16 +1,18 @@
 package osrm_interface;
 
+import minimal_json.JsonObject;
+
 public class StepManeuver {
 	
 	public final LatLng location;
-	public final double bearingBefore;
-	public final double bearingAfter;
+	public final int bearingBefore;
+	public final int bearingAfter;
 	public final String type;
 	
 	public final String modifier;
 	public final int exit;
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
 			String inType) {
 		
 		location = inLocation;
@@ -23,7 +25,7 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
 			String inType, String inModifier) {
 		
 		location = inLocation;
@@ -36,7 +38,7 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
 			String inType, int inExit) {
 		
 		location = inLocation;
@@ -49,7 +51,7 @@ public class StepManeuver {
 		
 	}
 	
-	public StepManeuver(LatLng inLocation, double inbearingBefore, double inBearingAfter,
+	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
 			String inType, String inModifier, int inExit) {
 		
 		location = inLocation;
@@ -59,6 +61,18 @@ public class StepManeuver {
 		
 		modifier = inModifier;
 		exit = inExit;
+		
+	}
+
+	public StepManeuver(JsonObject jsonManeuver) {
+		
+		location = new LatLng(jsonManeuver.get("waypoint").asObject());
+		bearingBefore = jsonManeuver.getInt("bearing_before", -1);
+		bearingAfter = jsonManeuver.getInt("bearing_after", -1);
+		type = jsonManeuver.getString("type", "");
+		
+		modifier = jsonManeuver.getString("modifier", "");
+		exit = jsonManeuver.getInt("exit", -1);
 		
 	}
 	

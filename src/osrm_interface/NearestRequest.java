@@ -103,19 +103,10 @@ public class NearestRequest {
 			return new NearestResult(statusCode.asString());
 		
 		JsonArray jsonWaypoints = mainJsonObject.get("waypoints").asArray();
-		
 		Waypoint[] waypoints = new Waypoint[numberOfLocations];
 		
-		for(int i = 0; i < numberOfLocations; i++) {
-			
-			JsonArray temp = jsonWaypoints.get(i).asObject().get("location").asArray();
-			
-			waypoints[i] = new Waypoint(jsonWaypoints.get(i).asObject().get("name").asString(),
-					new LatLng(temp.get(1).asDouble(), temp.get(0).asDouble()),
-					jsonWaypoints.get(i).asObject().get("hint").asString(),
-					jsonWaypoints.get(i).asObject().get("distance").asDouble());
-			
-		}
+		for(int i = 0; i < numberOfLocations; i++)
+			waypoints[i] = new Waypoint(jsonWaypoints.get(i).asObject());
 		
 		return new NearestResult(statusCode.asString(), waypoints);
 		

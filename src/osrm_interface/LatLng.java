@@ -1,5 +1,7 @@
 package osrm_interface;
 
+import minimal_json.JsonObject;
+
 public class LatLng {
 
 	private double latitude;
@@ -23,6 +25,13 @@ public class LatLng {
 		
 		latitude = inLatitude;
 		longitude = inLongitude;
+		
+	}
+	
+	public LatLng(JsonObject inLatLng) {
+		
+		latitude = inLatLng.asArray().get(1).asDouble();
+		longitude = inLatLng.asArray().get(0).asDouble();
 		
 	}
 	

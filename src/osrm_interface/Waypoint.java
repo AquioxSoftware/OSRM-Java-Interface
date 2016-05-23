@@ -1,5 +1,7 @@
 package osrm_interface;
 
+import minimal_json.JsonObject;
+
 public class Waypoint {
 	
 	public final String name;
@@ -62,6 +64,19 @@ public class Waypoint {
 		matchingsIndex = -1;
 		waypointIndex = inWaypointIndex;
 		tripsIndex = inTripsIndex;
+		
+	}
+	
+	public Waypoint(JsonObject jsonWaypoint) {
+		
+		name = jsonWaypoint.get("name").asString();
+		location = new LatLng(jsonWaypoint.get("location").asObject());
+		hint = jsonWaypoint.get("hint").asString();
+		
+		distance = jsonWaypoint.getDouble("distance", -1);
+		matchingsIndex = jsonWaypoint.getInt("matchings_index", -1);
+		waypointIndex = jsonWaypoint.getInt("waypoint_index", -1);
+		tripsIndex = jsonWaypoint.getInt("trips_index", -1);
 		
 	}
 	
