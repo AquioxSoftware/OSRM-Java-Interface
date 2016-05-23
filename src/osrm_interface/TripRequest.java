@@ -14,7 +14,7 @@ import minimal_json.JsonValue;
 public class TripRequest {
 
 	private String baseTextURL;
-	private final String nearestTextURL = "/nearest/v1/";
+	private final String tripTextURL = "/trip/v1/";
 	private String profile;
 	private ArrayList<LatLng> locations;
 	
@@ -117,7 +117,7 @@ public class TripRequest {
 	public TripResult makeRequest() {
 		
 		String requestTextURL = baseTextURL;
-		requestTextURL += nearestTextURL;
+		requestTextURL += tripTextURL;
 		requestTextURL += profile + "/";
 		requestTextURL += addLocations();
 		requestTextURL += addOptions();

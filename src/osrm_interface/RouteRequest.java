@@ -14,7 +14,7 @@ import minimal_json.JsonValue;
 public class RouteRequest {
 
 	private String baseTextURL;
-	private final String nearestTextURL = "/nearest/v1/";
+	private final String routeTextURL = "/route/v1/";
 	private String profile;
 	private ArrayList<LatLng> locations;
 	
@@ -131,7 +131,7 @@ public class RouteRequest {
 	public RouteResult makeRequest() {
 		
 		String requestTextURL = baseTextURL;
-		requestTextURL += nearestTextURL;
+		requestTextURL += routeTextURL;
 		requestTextURL += profile + "/";
 		requestTextURL += addLocations();
 		requestTextURL += addOptions();
