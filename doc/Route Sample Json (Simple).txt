@@ -1,0 +1,37 @@
+{
+  "code": "Ok",
+  "routes": [
+    {
+      "legs": [
+        {
+          "steps": [
+            
+          ],
+          "summary": "",
+          "duration": 159.8,
+          "distance": 1576.8
+        }
+      ],
+      "duration": 159.8,
+      "distance": 1576.8
+    }
+  ],
+  "waypoints": [
+    {
+      "hint": "DSkOg2REEo5o7wAACAAAADEAAAAAAAAAAAAAANmj-wlHGKUP0d4AAOs6Dfu6G2ICrDoN-70bYgIAAAEBlbqN6g==",
+      "name": "Perry Street",
+      "location": [
+        -83.019029,
+        39.984058
+      ]
+    },
+    {
+      "hint": "15QLg9rY0YgNNwAAOAAAAAEAAAAAAAAAAAAAAHyj-gnCvuYM0d4AAMQGDfv6CGICvwYN-_wIYgIAAAEBlbqN6g==",
+      "name": "Copeland Road",
+      "location": [
+        -83.03238,
+        39.979258
+      ]
+    }
+  ]
+}

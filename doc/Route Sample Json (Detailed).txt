@@ -1,0 +1,495 @@
+{
+  "code": "Ok",
+  "routes": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "intersections": [
+                {
+                  "out": 0,
+                  "entry": [
+                    true
+                  ],
+                  "bearings": [
+                    183
+                  ],
+                  "location": [
+                    -83.019029,
+                    39.984058
+                  ]
+                }
+              ],
+              "geometry": "kk`sF|suyNL?",
+              "maneuver": {
+                "bearing_after": 183,
+                "type": "depart",
+                "modifier": "right",
+                "bearing_before": 0,
+                "location": [
+                  -83.019029,
+                  39.984058
+                ]
+              },
+              "duration": 1.7,
+              "distance": 7.7,
+              "name": "Perry Street",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "out": 3,
+                  "location": [
+                    -83.019034,
+                    39.983989
+                  ],
+                  "bearings": [
+                    0,
+                    90,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 1,
+                  "location": [
+                    -83.020635,
+                    39.984059
+                  ],
+                  "bearings": [
+                    90,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 1,
+                  "location": [
+                    -83.022027,
+                    39.984121
+                  ],
+                  "bearings": [
+                    90,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 3,
+                  "location": [
+                    -83.022604,
+                    39.984136
+                  ],
+                  "bearings": [
+                    0,
+                    90,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    true,
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 1
+                },
+                {
+                  "out": 3,
+                  "location": [
+                    -83.024321,
+                    39.984206
+                  ],
+                  "bearings": [
+                    0,
+                    90,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    true,
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 1
+                },
+                {
+                  "out": 2,
+                  "location": [
+                    -83.027738,
+                    39.984369
+                  ],
+                  "bearings": [
+                    90,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                }
+              ],
+              "geometry": "}j`sF|suyNM`IKtGAjAAd@",
+              "maneuver": {
+                "bearing_after": 273,
+                "type": "turn",
+                "modifier": "right",
+                "bearing_before": 183,
+                "location": [
+                  -83.019034,
+                  39.983989
+                ]
+              },
+              "duration": 27.4,
+              "distance": 304.7,
+              "name": "West Third Avenue",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "out": 2,
+                  "location": [
+                    -83.029383,
+                    39.984454
+                  ],
+                  "bearings": [
+                    0,
+                    90,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    true,
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 1
+                }
+              ],
+              "geometry": "ym`sFrtwyNpB@",
+              "maneuver": {
+                "bearing_after": 181,
+                "type": "turn",
+                "modifier": "left",
+                "bearing_before": 274,
+                "location": [
+                  -83.029383,
+                  39.984454
+                ]
+              },
+              "duration": 7.8,
+              "distance": 63.5,
+              "name": "Bobcat Avenue",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "out": 2,
+                  "location": [
+                    -83.029391,
+                    39.983883
+                  ],
+                  "bearings": [
+                    0,
+                    180,
+                    255
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 1,
+                  "location": [
+                    -83.030326,
+                    39.983142
+                  ],
+                  "bearings": [
+                    30,
+                    195,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 1,
+                  "location": [
+                    -83.030623,
+                    39.981945
+                  ],
+                  "bearings": [
+                    0,
+                    180,
+                    285
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 1,
+                  "location": [
+                    -83.030928,
+                    39.980933
+                  ],
+                  "bearings": [
+                    0,
+                    180,
+                    270
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                }
+              ],
+              "geometry": "gj`sFttwyNN~@dBhB\\P",
+              "maneuver": {
+                "bearing_after": 251,
+                "type": "turn",
+                "modifier": "right",
+                "bearing_before": 181,
+                "location": [
+                  -83.029391,
+                  39.983883
+                ]
+              },
+              "duration": 13.8,
+              "distance": 119.2,
+              "name": "Edgehill Road",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "out": 1,
+                  "location": [
+                    -83.030795,
+                    39.980567
+                  ],
+                  "bearings": [
+                    75,
+                    240,
+                    345
+                  ],
+                  "entry": [
+                    true,
+                    true,
+                    false
+                  ],
+                  "in": 2
+                },
+                {
+                  "out": 2,
+                  "location": [
+                    -83.031296,
+                    39.980338
+                  ],
+                  "bearings": [
+                    60,
+                    150,
+                    240,
+                    330
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                }
+              ],
+              "geometry": "qu_sFn}wyNl@bB",
+              "maneuver": {
+                "bearing_after": 239,
+                "type": "end of road",
+                "modifier": "right",
+                "bearing_before": 159,
+                "location": [
+                  -83.030795,
+                  39.980567
+                ]
+              },
+              "duration": 5.8,
+              "distance": 49.7,
+              "name": "First Avenue",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "out": 2,
+                  "location": [
+                    -83.031866,
+                    39.980078
+                  ],
+                  "bearings": [
+                    60,
+                    150,
+                    210,
+                    330
+                  ],
+                  "entry": [
+                    false,
+                    false,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 2,
+                  "location": [
+                    -83.031949,
+                    39.97996
+                  ],
+                  "bearings": [
+                    30,
+                    150,
+                    210,
+                    330
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    false
+                  ],
+                  "in": 0
+                },
+                {
+                  "out": 2,
+                  "location": [
+                    -83.032163,
+                    39.979657
+                  ],
+                  "bearings": [
+                    30,
+                    120,
+                    210,
+                    285
+                  ],
+                  "entry": [
+                    false,
+                    true,
+                    true,
+                    true
+                  ],
+                  "in": 0
+                }
+              ],
+              "geometry": "or_sFddxyNVN",
+              "maneuver": {
+                "bearing_after": 208,
+                "type": "new name",
+                "modifier": "slight left",
+                "bearing_before": 239,
+                "location": [
+                  -83.031866,
+                  39.980078
+                ]
+              },
+              "duration": 1.7,
+              "distance": 14.9,
+              "name": "Copeland Road",
+              "mode": "driving"
+            },
+            {
+              "intersections": [
+                {
+                  "in": 0,
+                  "entry": [
+                    true
+                  ],
+                  "bearings": [
+                    23
+                  ],
+                  "location": [
+                    -83.03238,
+                    39.979258
+                  ]
+                }
+              ],
+              "geometry": "km_sFjgxyN",
+              "maneuver": {
+                "bearing_after": 0,
+                "location": [
+                  -83.032163,
+                  39.979657
+                ],
+                "bearing_before": 203,
+                "type": "arrive"
+              },
+              "duration": 0,
+              "distance": 0,
+              "name": "Copeland Road",
+              "mode": "driving"
+            }
+          ],
+          "summary": "West Third Avenue, Edgehill Road",
+          "duration": 159.8,
+          "distance": 1576.8
+        }
+      ],
+      "geometry": "kk`sF|suyNL?M`IKtGAjAAd@?n@?@MdHAz@GrBEbC?HCzAGlECbAOfIpB@N~@dBhB\\Pj@PzAXlAJV@xANZHXL\\P\\BL@x@[l@bBr@pBVNz@h@nAj@",
+      "duration": 159.8,
+      "distance": 1576.8
+    }
+  ],
+  "waypoints": [
+    {
+      "hint": "DSkOg2REEo5o7wAACAAAADEAAAAAAAAAAAAAANmj-wlHGKUP0d4AAOs6Dfu6G2ICrDoN-70bYgIAAAEBlbqN6g==",
+      "name": "Perry Street",
+      "location": [
+        -83.019029,
+        39.984058
+      ]
+    },
+    {
+      "hint": "15QLg9rY0YgNNwAAOAAAAAEAAAAAAAAAAAAAAHyj-gnCvuYM0d4AAMQGDfv6CGICvwYN-_wIYgIAAAEBlbqN6g==",
+      "name": "Copeland Road",
+      "location": [
+        -83.03238,
+        39.979258
+      ]
+    }
+  ]
+}
