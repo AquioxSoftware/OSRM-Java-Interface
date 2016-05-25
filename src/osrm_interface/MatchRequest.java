@@ -62,15 +62,15 @@ public class MatchRequest {
 		
 	}
 	
-	public void setLocation(LatLng inLocation) {
+	public void addLocation(LatLng inLocation) {
 		
-		locations.set(0, inLocation);
+		locations.add(inLocation);
 		
 	}
 	
-	public void setLocation(double inLatitude, double inLongitude) {
+	public void addLocation(double inLatitude, double inLongitude) {
 		
-		locations.set(0, new LatLng(inLatitude, inLongitude));
+		locations.add(new LatLng(inLatitude, inLongitude));
 		
 	}
 	
