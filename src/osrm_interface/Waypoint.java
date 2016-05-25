@@ -70,7 +70,7 @@ public class Waypoint {
 	public Waypoint(JsonObject jsonWaypoint) {
 		
 		name = jsonWaypoint.get("name").asString();
-		location = new LatLng(jsonWaypoint.get("location").asObject());
+		location = new LatLng(jsonWaypoint.get("location").asArray());
 		hint = jsonWaypoint.get("hint").asString();
 		
 		distance = jsonWaypoint.getDouble("distance", -1);

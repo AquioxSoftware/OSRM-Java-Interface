@@ -29,6 +29,7 @@ public class NearestRequest {
 		baseTextURL = "http://localhost:5000";
 		profile = "driving";
 		locations = new ArrayList<LatLng>(0);
+		locations.add(new LatLng());
 		
 		bearings = new ArrayList<Bearing>(0);
 		radius = new ArrayList<Double>(0);

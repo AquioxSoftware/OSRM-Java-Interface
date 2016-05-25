@@ -22,7 +22,7 @@ public class Intersection {
 	
 	public Intersection(JsonObject jsonIntersection) {
 		
-		location = new LatLng(jsonIntersection.get("location").asObject());
+		location = new LatLng(jsonIntersection.get("location").asArray());
 		in = jsonIntersection.getInt("in", -1);
 		out = jsonIntersection.getInt("out", -1);
 		
