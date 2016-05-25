@@ -133,7 +133,7 @@ public class TableRequest {
 		
 	}
 	
-	public String addLocations() {
+	private String addLocations() {
 		
 		String result = "";
 		
@@ -149,7 +149,7 @@ public class TableRequest {
 		
 	}
 	
-	public String addOptions() {
+	private String addOptions() {
 		
 		String result = "";
 		
@@ -236,7 +236,7 @@ public class TableRequest {
 		
 	}
 	
-	public String getJsonFromURL(String url) {
+	private String getJsonFromURL(String url) {
 		
 		String jsonText = "";
 		
