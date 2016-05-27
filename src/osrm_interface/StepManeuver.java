@@ -66,7 +66,11 @@ public class StepManeuver {
 
 	public StepManeuver(JsonObject jsonManeuver) {
 		
-		location = new LatLng(jsonManeuver.get("waypoint").asArray());
+		if(jsonManeuver.get("waypoint") != null)
+			location = new LatLng(jsonManeuver.get("waypoint").asArray());
+		else
+			location = null;
+		
 		bearingBefore = jsonManeuver.getInt("bearing_before", -1);
 		bearingAfter = jsonManeuver.getInt("bearing_after", -1);
 		type = jsonManeuver.getString("type", "");

@@ -40,16 +40,10 @@ public class RouteLeg {
 		duration = jsonLeg.getDouble("duration", -1);
 		summary = jsonLeg.getString("summary", "");
 		
-		
-		if(jsonLeg.get("annotation") != null) {
-			
+		if(jsonLeg.get("annotation") != null)
 			annotation = new Annotation(jsonLeg.get("annotation").asObject());
-			
-		} else {
-			
+		else
 			annotation = null;
-			
-		}
 		
 		RouteStep[] inSteps = new RouteStep[jsonLeg.get("steps").asArray().size()];
 		
