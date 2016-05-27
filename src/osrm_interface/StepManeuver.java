@@ -11,58 +11,6 @@ public class StepManeuver {
 	
 	public final String modifier;
 	public final int exit;
-	
-	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
-			String inType) {
-		
-		location = inLocation;
-		bearingBefore = inbearingBefore;
-		bearingAfter = inBearingAfter;
-		type = inType;
-		
-		modifier = "";
-		exit = -1;
-		
-	}
-	
-	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
-			String inType, String inModifier) {
-		
-		location = inLocation;
-		bearingBefore = inbearingBefore;
-		bearingAfter = inBearingAfter;
-		type = inType;
-		
-		modifier = inModifier;
-		exit = -1;
-		
-	}
-	
-	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
-			String inType, int inExit) {
-		
-		location = inLocation;
-		bearingBefore = inbearingBefore;
-		bearingAfter = inBearingAfter;
-		type = inType;
-		
-		modifier = "";
-		exit = inExit;
-		
-	}
-	
-	public StepManeuver(LatLng inLocation, int inbearingBefore, int inBearingAfter,
-			String inType, String inModifier, int inExit) {
-		
-		location = inLocation;
-		bearingBefore = inbearingBefore;
-		bearingAfter = inBearingAfter;
-		type = inType;
-		
-		modifier = inModifier;
-		exit = inExit;
-		
-	}
 
 	public StepManeuver(JsonObject jsonManeuver) {
 		

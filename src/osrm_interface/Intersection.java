@@ -10,16 +10,6 @@ public class Intersection {
 	public final boolean[] entry;
 	public final int in, out;
 	
-	public Intersection(LatLng inLocation, int[] inBearings, boolean[] inEntry, int inIn, int inOut) {
-		
-		location = inLocation;
-		bearings = inBearings;
-		entry = inEntry;
-		in = inIn;
-		out = inOut;
-		
-	}
-	
 	public Intersection(JsonObject jsonIntersection) {
 		
 		location = new LatLng(jsonIntersection.get("location").asArray());

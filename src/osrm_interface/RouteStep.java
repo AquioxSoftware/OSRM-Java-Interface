@@ -12,20 +12,6 @@ public class RouteStep {
 	public final StepManeuver maneuver;
 	public final Intersection[] intersections;
 	
-	public RouteStep(double inDistance, double inDuration, String inGeometry, String inName, String inMode,
-			StepManeuver inManeuver, Intersection[] inIntersections) {
-		
-		distance = inDistance;
-		duration = inDuration;
-		geometry = inGeometry;
-		name = inName;
-		mode = inMode;
-		maneuver = inManeuver;
-		intersections = inIntersections;
-		
-		
-	}
-	
 	public RouteStep(JsonObject jsonStep) {
 		
 		distance = jsonStep.getDouble("distance", -1);
