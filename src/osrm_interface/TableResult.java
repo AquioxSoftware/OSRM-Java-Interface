@@ -25,4 +25,34 @@ public class TableResult {
 		
 	}
 	
+	public String toString() {
+		
+		String result = "Code: " + code + '\n';
+		
+		result += "Durations:\n";
+		
+		for(int i = 0; i < durations.length; i++) {
+			
+			for(int ii = 0; ii < durations[0].length; ii++) {
+				
+				result += durations[i][ii] + "  ";
+						
+			}
+			
+			result += '\n';
+			
+		}
+		
+		result += "Sources:\n";
+		for(Waypoint current : sources)
+			result += current.location + "\n";
+		
+		result += "Destinations:\n";
+		for(Waypoint current : destinations)
+			result += current.location + "\n";
+		
+		return result;
+		
+	}
+	
 }

@@ -76,9 +76,9 @@ public class MatchRequest {
 		
 	}
 	
-	public void addBearing(Bearing inBearing) {
+	public void addBearing(int inAngleWithTrueNorth, int inRange) {
 		
-		bearings.add(inBearing);
+		bearings.add(new Bearing(inAngleWithTrueNorth, inRange));
 		
 	}
 	
@@ -233,7 +233,7 @@ public class MatchRequest {
 			result += "&radiuses=" + radius.get(0);
 			
 			for(int i = 1; i < radius.size(); i++)
-				result += ";" + radius.size();
+				result += ";" + radius.get(i);
 			
 		}
 		

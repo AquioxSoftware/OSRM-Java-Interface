@@ -22,4 +22,20 @@ public class TripResult {
 		
 	}
 	
+	public String toString() {
+		
+		String result = "Code: " + code + '\n';
+		
+		result += "Waypoints:\n";
+		for(Waypoint current : waypoints)
+			result += current.location + "\n";
+		
+		result += "Trips:\n";
+		for(Route current : trips)
+			result += current.toString();
+		
+		return result;
+		
+	}
+	
 }

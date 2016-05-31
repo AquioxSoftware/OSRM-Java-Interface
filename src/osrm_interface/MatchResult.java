@@ -22,4 +22,20 @@ public class MatchResult {
 		
 	}
 	
+	public String toString() {
+		
+		String result = "Code: " + code + '\n';
+		
+		result += "Tracepoints:\n";
+		for(Waypoint current : tracepoints)
+			result += current.location + "\n";
+		
+		result += "Matchings:\n";
+		for(Route current : matchings)
+			result += current.toString();
+		
+		return result;
+		
+	}
+	
 }

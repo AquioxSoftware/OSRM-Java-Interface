@@ -26,4 +26,13 @@ public class Route {
 		legs = inLegs;
 		
 	}
+	
+	public String toString() {
+		
+		return "Distance: " + distance + '\n' +
+			   "Duration: " + duration + '\n' +
+			   "Geometry: " + geometry + '\n';
+		
+	}
+	
 }

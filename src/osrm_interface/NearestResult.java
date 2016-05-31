@@ -19,4 +19,15 @@ public class NearestResult {
 		
 	}
 	
+	public String toString() {
+		
+		String result = "Code: " + code + "\n";
+		
+		for(Waypoint current : waypoints)
+			result += current.location + " at a distance of " + current.distance + "\n";
+		
+		return result;
+		
+	}
+	
 }
