@@ -2,23 +2,23 @@ package osrm_interface;
 
 public class Bearing {
 
-	private final double angleToTrueNorth;
-	private final double range;
+	private final int angleToTrueNorth;
+	private final int range;
 	
-	public Bearing(double inAngleToTrueNorth, double inRange) {
+	public Bearing(int inAngleToTrueNorth, int inRange) {
 			
 		angleToTrueNorth = inAngleToTrueNorth;
 		range = inRange;
 		
 	}
 	
-	public double getAngleToTrueNorth() {
+	public int getAngleToTrueNorth() {
 		
 		return angleToTrueNorth;
 		
 	}
 	
-	public double getRange() {
+	public int getRange() {
 		
 		return range;
 		

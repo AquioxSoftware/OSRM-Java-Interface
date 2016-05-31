@@ -2,7 +2,9 @@ package osrm_interface;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -128,8 +130,12 @@ public class TripRequest {
 		JsonObject mainJsonObject = Json.parse(jsonText).asObject();
 		JsonValue statusCode = mainJsonObject.get("code");
 		
-		if(!statusCode.asString().equals("Ok"))
+		if(!statusCode.asString().equals("Ok")) {
+			
+			System.err.println("INFO: Request Error: Code: \"" + statusCode.asString() + "\" Message: \"" + mainJsonObject.getString("message", "No Message") + "\"");
 			return new TripResult(statusCode.asString());
+			
+		}
 		
 		JsonArray jsonWaypoints = mainJsonObject.get("waypoints").asArray();
 		JsonArray jsonTrips = mainJsonObject.get("trips").asArray();
@@ -234,7 +240,16 @@ public class TripRequest {
 		try {
 			
 			URL request = new URL(url);
-        	BufferedReader in = new BufferedReader(new InputStreamReader(request.openStream()));
+			
+			HttpURLConnection httpConnection = (HttpURLConnection)request.openConnection();
+			InputStream requestStream;
+			
+			if (httpConnection.getResponseCode() == 200)
+				requestStream = httpConnection.getInputStream();
+			else
+				requestStream = httpConnection.getErrorStream();
+			
+        	BufferedReader in = new BufferedReader(new InputStreamReader(requestStream));
 			
 			String inputLine;
 			
@@ -245,7 +260,7 @@ public class TripRequest {
 	        
 		} catch (IOException e) {
 			
-			e.printStackTrace();
+			System.err.println("INFO: Connection Error");
 			
 		}
 		
