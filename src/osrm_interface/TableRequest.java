@@ -102,6 +102,7 @@ public class TableRequest {
 		requestTextURL += addLocations();
 		requestTextURL += addOptions();
 		
+		System.out.println("INFO: Request: " + requestTextURL);
 		String jsonText = getJsonFromURL(requestTextURL);
 		
 		JsonObject mainJsonObject = Json.parse(jsonText).asObject();

@@ -122,6 +122,7 @@ public class TripRequest {
 		requestTextURL += addLocations();
 		requestTextURL += addOptions();
 		
+		System.out.println("INFO: Request: " + requestTextURL);
 		String jsonText = getJsonFromURL(requestTextURL);
 		
 		JsonObject mainJsonObject = Json.parse(jsonText).asObject();
@@ -167,7 +168,7 @@ public class TripRequest {
 		String result = "";
 		
 		result += "?steps=" + steps;
-		result += "&annotate=" + annotate;
+		result += "&annotations=" + annotate;
 		
 		if(geometries) {
 			

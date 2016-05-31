@@ -136,6 +136,7 @@ public class RouteRequest {
 		requestTextURL += addLocations();
 		requestTextURL += addOptions();
 		
+		System.out.println("INFO: Request: " + requestTextURL);
 		String jsonText = getJsonFromURL(requestTextURL);
 		
 		JsonObject mainJsonObject = Json.parse(jsonText).asObject();
@@ -182,7 +183,7 @@ public class RouteRequest {
 		
 		result += "?alternatives=" + alternatives;
 		result += "&steps=" + steps;
-		result += "&annotate=" + annotate;
+		result += "&annotations=" + annotate;
 		result += "&continue_straight=" + continueStraight;
 		
 		if(geometries) {
